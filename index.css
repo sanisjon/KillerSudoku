@@ -1,0 +1,252 @@
+/* styles.css */
+#page{
+    justify-content: space-between;
+}
+#page section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2em;
+}
+    #instruction{
+        height: 10em;
+        width: 10em;
+
+        aspect-ratio: 1/1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #5b5b5b;
+    }
+    .grid{
+        height: 100%;
+        width: 100%;
+
+        font-size: 1em;
+        gap: 1px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+    }
+    #skulls .block{
+        font-size: 100%;
+        height: 1em;
+        width: 1em;
+    }
+
+    #skulls{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 10em;
+        min-height: 200px;
+        width: 50%;
+        margin-bottom: 2%;
+    }
+        #skulls label{
+            display: none;
+
+            height: 5em;
+            margin: 1em 0 2em 0;
+            min-height: 200px;
+            aspect-ratio: 1/1;
+
+            transition: all .5s ease-in;
+
+            background-size: 100%;
+            background-repeat: no-repeat;
+            animation: fadeOut 0.3s forwards;
+        }
+
+        #skulls label.show {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            animation: fadeInDrop 0.5s forwards;
+        }
+
+        #skulls label.hide {
+            animation: fadeOut 0.5s forwards;
+            display: none;
+        }
+
+@keyframes fadeInDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        #skull_easy.show {
+            background-image: url('img/easy_skull.png');
+        }
+
+        #skull_hard.show {
+            background-image: url('img/hard_skull.png');
+        }
+
+        #skull_expert.show {
+            background-image: url('img/expert_skull.png');
+        }
+
+    .radio-buttons{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        /*height: 20%;*/
+        min-height: 1.6em;
+        width: 50%;
+        color: #5b5b5b;
+
+        border: #5b5b5b solid 2px;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+        .radio-buttons div {
+            position: relative;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            width: 1fr;
+        }
+            .radio-buttons div:nth-child(2){
+                border-left: #5b5b5b solid 1px;
+                border-right: #5b5b5b solid 1px;
+            }
+            .radio-buttons div:hover{
+                background-color: #e7e7e7;
+                font-size: 110%;
+            }
+
+            .checkmark{
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 100%;
+                height: 100%;
+
+                transition: all .2s ease-in;
+            }
+
+            .radio-buttons div input{
+                position: absolute;
+
+                width: 100%;
+                height: 100%;
+
+                opacity: 0.0;
+                cursor: pointer;
+
+            }
+            .radio-buttons input:checked + .checkmark {
+                background-color: var(--blue_selected);
+                color: #eaeaea;
+            }
+
+
+#page footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.button {
+    /* Your existing button styles */
+    font-size: 2em;
+    min-height: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1px 92px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #0076ff;
+    border: none;
+    border-radius: 100px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 1%;
+    margin-bottom: 10%;
+}
+.button p{
+    margin: 0;
+}
+.button span {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 0.4em;
+}
+.button span p{
+    display: block;
+    align-items: center;
+}
+.button span img{
+    height: 1em;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.button:hover {
+    background-color: #005bb5;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 700px){
+    .openbtn{
+        top: 1%;
+        left: 1%;
+    }
+    .radio-buttons{
+        width: 85%;
+        min-height: 1.5em;
+        font-size: 0.9em;
+    }
+}
+@media only screen and (max-width: 340px){
+    #instruction{
+        height: 9em;
+        width: 9em;
+    }
+    #skulls .block {
+        height: 0.9em;
+        width: 0.9em;
+    }
+
+    .button{
+        height: 2.2em;
+        width: 121px;
+        font-size: 1.5em;
+        padding: 1px 57px;
+    }
+    .button p:nth-child(1){
+        font-size: 1em;
+    }
+    .button span{
+        font-size: 0.5em;
+    }
+
+}

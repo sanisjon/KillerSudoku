@@ -1,0 +1,55 @@
+:root {
+    --base: #f7f7f8;
+    --base-text: #bdb7b7;
+    --base-gray-text: #5b5b5b;
+    --blue-text: #325aae;
+    --grid: #c2d1e9;
+    --blue_selected: #0074fd;
+
+    --base_block: #e3e0e0;
+    --selected_block_rest:#70C1FF;
+    --selected_block_same: #70ffc3;
+    --selected_sumFields: #27D7FF;
+    --selected_block: #ADF0FF;
+
+    --base_border: #527c9c;
+    --base-blue-element: #008cff;
+}
+
+html, body {
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    font-family: Noto Sans, sans-serif;
+    display: block;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+#page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--base);
+}
+
+#page header{
+    display: flex;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+}
+#logo{
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+#logo img{
+    height: 100%;
+    object-fit: contain;
+}

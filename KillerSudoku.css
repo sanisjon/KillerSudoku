@@ -1,0 +1,488 @@
+/* styles.css */
+html, body {
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    font-family: Noto Sans, sans-serif;
+    display: block;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+#interrupted {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        z-index: 1;
+    }
+}
+    #interrupted a{
+        color: inherit;
+        text-decoration: none;
+    }
+    #interrupted > div {
+        background: white;
+        width: 30vw;
+        height: 80vh;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 20px;
+        border-radius: 10%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transform: scale(0) rotateY(90deg);
+        animation: popUp 0.4s forwards ease-in-out;
+
+    }
+        @keyframes popUp {
+           to {
+                transform: scale(1) rotateY(0deg);
+                opacity: 1;
+            }
+        }
+
+    #interrupted > div:first-child > div {
+        font-size: 3em;
+    }
+    #interrupted section {
+        font-size: 1.8em;
+        display: flex;
+        width: 98%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #interrupted section div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #interrupted section div p{
+        color: var(--base-gray-text);
+        margin-top: 1%;
+    }
+
+
+    #interrupted #image{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 30%;
+        aspect-ratio: 1/1;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+#interrupted #image.easy{
+    color: #b902ff;
+}
+#interrupted #image.hard{
+    color: #205aea;
+}
+#interrupted #image.expert{
+    color: #f4002d;
+}
+    #image img{
+        max-height: 90%;
+        object-fit: contain;
+    }
+    #interrupted button {
+        margin-bottom: 20px;
+
+        background: #0076ff;
+        color: #fff;
+
+        border: none;
+        padding: 10px 20px;
+        font-size: 2em;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: 0.3s ease;
+    }
+        #interrupted button:hover {
+        background: #005bb5;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        #interrupted button:active{
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        #save_game{
+            background-color: rgb(0, 0, 0, 0);
+            padding: 3px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: var(--base-text);
+            transition: 0.4s ease;
+            cursor: pointer;
+        }
+        #save_game:hover{
+            scale: 1.2;
+            transform: translateY(-2px);
+        }
+
+
+
+#page header{
+    display: flex;
+
+    max-height: 3em;
+    flex-grow: 1;
+
+    align-items: center;
+    justify-content: space-evenly;
+
+    background: var(--base);
+
+    font-size: 2em;
+    color: var(--base-text);
+}
+    #page header div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #timer_div{
+        flex-direction: row;
+    }
+        #timer_div div:nth-child(1){
+            display: flex;
+            flex-direction: column;
+        }
+        #timer_div div:nth-child(2){
+            margin-left: 0.5em;
+            position: relative;
+            height: 2em;
+            width: 2em;
+
+        }
+            #timer_div label{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+
+                display: block;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-image: url("svg/pause.svg");
+                transition: all .2s ease-in;
+                cursor: pointer;
+            }
+            #timer_div label:hover{
+                scale: 1.2;
+            }
+            #timer_div input{
+                position: absolute;;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+            }
+                #timer_div input:checked + label{
+                    background-image: url("svg/play.svg");
+                }
+
+
+
+    #mistakes_div{
+        flex-direction: column;
+    }
+    #score_div{
+        flex-direction: column;
+    }
+
+
+#page{
+    justify-content: space-between;
+}
+#page section{
+    display: flex;
+    padding: 1% 0 1% 0;
+    flex-grow: 3;
+
+    flex-direction: row;
+    background: var(--base);
+}
+    #page section main{
+        height: 98%;
+    display: flex;
+    flex-grow: 3;
+
+    justify-content: center;
+
+    background: var(--base);
+}
+    .grid{
+        height: 100%;
+        background: #c3d2ea;
+        aspect-ratio: 1 / 1;
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        /*gap: 5px;*/
+
+        object-fit: contain;
+    }
+        .square{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            border: 1px solid #5b5b5b;
+        }
+            .block {
+                display: flex;
+                border: 1px dotted rgba(201, 201, 204, 0.8);
+                cursor: pointer;
+            }
+                .value{
+                    display: flex;
+                    flex-grow: 3;
+                    align-items: center;
+                }
+                .guess{
+                    display: flex;
+                    flex-grow: 3;
+                    align-items: center;
+                    color: #ff0000;
+                }
+                .sum_of_field {
+                    flex-grow: 2;
+                    font-size: 0.5em;
+                    padding: 3px 0 0 3px;
+                }
+                .noteGrid{
+                    display: grid;
+                    flex-grow: 3;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+                    font-size: 0.4em;
+                    color: #224d62;
+                }
+
+#page section aside{
+    flex-grow: 1;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    /*justify-items: center;*/
+    align-items: center;
+    gap: 1em;
+
+    background: var(--base);
+}
+#page section aside div{
+            aspect-ratio: 1/1;
+            margin: 10%;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            transition: all .2s ease-out;
+            cursor: pointer;
+        }
+#page section aside div:hover{
+    scale: 1.1;
+}
+        #undo{
+            background-image: url('svg/undo.svg');
+        }
+            #undo.rotate {
+                animation-timing-function: ease-out;
+                animation-name: rotation;
+                animation-duration: 1s ;
+            }
+            @keyframes rotation {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(-360deg);
+                }
+            }
+
+        #note{
+            position: relative;
+        }
+            #note label{
+                position: absolute;
+
+                display: block;
+                width: 100%;
+                height: 100%;
+
+                background-size: 90%;
+                background-repeat: no-repeat;
+                background-image: url('svg/Note OFF.svg');
+
+                transition: all .4s ease-in;
+                cursor: pointer;
+            }
+            #note input{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+            #note input:checked + label{
+                background-image: url('svg/Note ON.svg');
+            }
+
+        #erase{
+            background-image: url('svg/erase.svg');
+        }
+        #hint{
+            position: relative;
+            background-image: url('svg/light-bulb.svg');
+        }
+            #hint #remainder{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                height: 31%;
+                width: 31%;
+
+                top: 0;
+                right: 0;
+                padding: 1%;
+
+                border-radius: 50%;
+                border: 3px solid var(--base);
+                font-weight: bold;
+                color: var(--base);
+                transition: .3s ease-in-out;
+            }
+            .available{
+                background-color: var(--base-blue-element);
+            }
+            .disable{
+                background-color: red;
+            }
+
+#page footer {
+    display: flex;
+    max-height: 5.2em;
+    flex-grow: 1;
+
+    align-items: center;
+    justify-content: space-evenly;
+
+
+    background: var(--base);
+}
+    .num_block{
+        color:var(--blue-text); ;
+        line-height: 100%;
+        font-size: 5em;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        transition: all .2s ease-out;
+        cursor: pointer;
+    }
+    .num_block:hover{
+        scale: 1.2;
+    }
+@media only screen and (max-width: 820px){
+    #interrupted > div{
+        width: 50vw;
+    }
+}
+@media only screen and (max-width: 820px) {
+    #page .openbtn{
+        left: 1%;
+        top: 1%;
+        font-size: 1.8em;
+    }
+}
+@media only screen and (max-width: 680px) {
+    #page section{
+        flex-direction: column;
+    }
+    #page section main{
+        height: 90%;
+    }
+    #page section aside{
+        height: 15%;
+        display: flex;
+        justify-content: space-around;
+    }
+    #page section aside div{
+        margin: 0;
+        height: 90%;
+    }
+
+}
+
+@media only screen and (max-width: 560px) {
+    #page header{
+        font-size: 1em;
+    }
+
+}
+@media only screen and (max-width: 560px) {
+    #page section{
+        justify-content: space-evenly;
+    }
+    #page section main{
+        height: 98vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        flex-grow: unset;
+    }
+    #page section aside{
+        flex-grow: unset;
+    }
+    #page section aside div{
+        height: 75%;
+    }
+    #page footer .num_block{
+        font-size: 2.7em
+    ;
+    }
+    #interrupted > div{
+        width: 70vw;
+    }
+    @media only screen and (max-width: 410px){
+        #interrupted section{
+            font-size: 1.3em;
+        }
+        #interrupted button{
+            font-size: 1.5em;
+        }
+    }
+
+}

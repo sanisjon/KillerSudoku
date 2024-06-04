@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KillerSudoku</title>
+    <link rel="stylesheet" href="basic.css">
+    <link rel="stylesheet" href="KillerSudoku.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+<!--    <link rel="manifest" href="/site.webmanifest">-->
+</head>
+<body>
+
+
+<div id="overlay">
+    <!--    <div id="interrupted">-->
+    <!--        <div>-->
+    <!--            <div>Pause</div>-->
+    <!--            <section>-->
+    <!--                <div>Time</div>-->
+    <!--                <div>Mistakes</div>-->
+    <!--                <div>Score</div>-->
+    <!--            </section>-->
+    <!--            <button>Resume game</button>-->
+    <!--        </div>-->
+    <!--    </div>-->
+</div>
+
+<div id = "page">
+    <button class="openbtn" onclick="openNav()">☰</button>
+    <div id="Sidebar" class="sidebar">
+        <p class="closebtn" onclick="closeNav()">×</p>
+        <a id ='Home' href="#" onmouseover="changeImage(this, 'svg/home_white.svg')" onmouseout="restoreImage(this, 'svg/home.svg')">
+            <img src="svg/saved.svg" alt=" ">
+            Home
+        </a>
+        <a href="statistic.html" onmouseover="changeImage(this, 'svg/statistic_white.svg')" onmouseout="restoreImage(this, 'svg/statistic.svg')">
+            <img src="svg/statistic.svg" alt=" ">
+            Statistic
+        </a>
+        <a href="saved_games.html" onmouseover="changeImage(this, 'svg/saved_white.svg')" onmouseout="restoreImage(this, 'svg/saved.svg')">
+            <img src="svg/saved.svg" alt=" ">
+            Saved
+        </a>
+        <a href="#" onmouseover="changeImage(this, 'svg/info_white.svg')" onmouseout="restoreImage(this, 'svg/info.svg')">
+            <img src="svg/info.svg" alt=" ">
+            How to?
+        </a>
+    </div>
+
+    <header>
+        <div id="mistakes_div">
+            Mistakes
+            <div id="mistakes">0/3</div>
+        </div>
+        <div id="timer_div">
+            <div>
+                Time
+                <div id="time">00:00</div>
+            </div>
+            <div>
+                <input type="checkbox" id="play_button">
+                <label for="play_button"></label>
+            </div>
+        </div>
+        <div id="score_div">
+            Score
+            <div id="score">0</div>
+        </div>
+
+    </header>
+    <section>
+        <main  id="sudoku-container">Hello</main>
+        <aside>
+            <div id="undo"></div>
+            <div id="note">
+                <input type="checkbox" id="note_checkbox">
+                <label for="note_checkbox"></label>
+            </div>
+            <div id="erase"></div>
+            <div id="hint"><span id ="remainder" class="available"></span></div>
+        </aside>
+    </section>
+    <footer id="number_bar"></footer>
+</div>
+
+</body>
+<script src="sidebar.js"></script>
+<script src="KillerSudoku.js"></script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistic</title>
+    <link rel="stylesheet" href="basic.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="statistic.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+<!--    <link rel="manifest" href="/site.webmanifest">-->
+</head>
+<body>
+
+<div id = "page">
+    <button class="openbtn" onclick="openNav()">☰</button>
+    <div id="Sidebar" class="sidebar">
+        <p class="closebtn" onclick="closeNav()">×</p>
+        <a href="index.html" onmouseover="changeImage(this, 'svg/home_white.svg')" onmouseout="restoreImage(this, 'svg/home.svg')">
+            <img src="svg/saved.svg" alt=" ">
+            Home
+        </a>
+        <a href="saved_games.html" onmouseover="changeImage(this, 'svg/saved_white.svg')" onmouseout="restoreImage(this, 'svg/saved.svg')">
+            <img src="svg/saved.svg" alt=" ">
+            Saved
+        </a>
+        <a href="#" onmouseover="changeImage(this, 'svg/info_white.svg')" onmouseout="restoreImage(this, 'svg/info.svg')">
+            <img src="svg/info.svg" alt=" ">
+            How to?
+        </a>
+    </div>
+
+    <header>
+        <div id="logo">
+            <img src="img/logo.png" alt="Killer Sudoku">
+        </div>
+    </header>
+    <div id="radio_container">
+        <div class="radio-buttons" id = "radio">
+            <div>
+                <input id="all" type="radio" name="difficulty" value="all" checked >
+                <span class="checkmark">all</span>
+            </div>
+            <div>
+                <input id="easy" type="radio" name="difficulty" value="easy" >
+                <span class="checkmark">Easy</span>
+            </div>
+            <div>
+                <input id="hard" type="radio" name="difficulty" value="hard">
+                <span class="checkmark">Hard</span>
+            </div>
+            <div>
+                <input id="expert" type="radio" name="difficulty" value="expert">
+                <span class="checkmark">Expert</span>
+            </div>
+        </div>
+    </div>
+
+    <section>
+    </section>
+
+
+</div>
+
+</body>
+<script src="sidebar.js"></script>
+<script src="statistic.js"></script>
+</html>

@@ -1,0 +1,69 @@
+#page .sidebar {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0075fd;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 20px 8px 25px;
+    text-decoration: none;
+    font-size: 2em;
+    color: #2c2c2c;
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+    line-height: 2em;
+    align-items: center;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+    background-color: #006fde;
+    scale: 1.1;
+}
+
+.sidebar a img{
+    aspect-ratio: 1/1;
+    height: 1.2em;
+    margin-right: 10px;
+    transition: 0.4s;
+}
+
+.closebtn {
+    position: absolute;
+    top: 5px;
+    right: 22px;
+    font-size: 2em;
+    cursor: pointer;
+    margin: 0;
+
+    transition: 0.3s;
+}
+.closebtn:hover{
+    color: #f1f1f1;
+    scale: 1.2;
+}
+.openbtn {
+    position: absolute;
+    top: 10px;
+    left: 1em;
+
+    font-size: 3em;
+    font-weight: bold;
+    cursor: pointer;
+    color: #5b5b5b;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    transition: 0.3s;
+}
+
+.openbtn:hover {
+    scale: 1.2;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home_KS</title>
+    <link rel="stylesheet" href="basic.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="play_card.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+<!--    <link rel="manifest" href="/site.webmanifest">-->
+</head>
+<body>
+
+<div id = "page">
+    <button class="openbtn" onclick="openNav()">☰</button>
+    <div id="Sidebar" class="sidebar">
+        <p class="closebtn" onclick="closeNav()">×</p>
+        <a href="statistic.html" onmouseover="changeImage(this, 'svg/statistic_white.svg')" onmouseout="restoreImage(this, 'svg/statistic.svg')">
+            <img src="svg/statistic.svg" alt=" ">
+            Statistic
+        </a>
+        <a href="saved_games.html" onmouseover="changeImage(this, 'svg/saved_white.svg')" onmouseout="restoreImage(this, 'svg/saved.svg')">
+            <img src="svg/saved.svg" alt=" ">
+            Saved
+        </a>
+        <a href="#" onmouseover="changeImage(this, 'svg/info_white.svg')" onmouseout="restoreImage(this, 'svg/info.svg')">
+            <img src="svg/info.svg" alt=" ">
+            How to?
+        </a>
+    </div>
+
+    <header>
+        <div id="logo">
+            <img src="img/logo.png" alt="Killer Sudoku">
+        </div>
+    </header>
+    <section>
+            <div id="skulls">
+                <div id="instruction">
+                    Select difficulty
+                </div>
+                <label id="skull_easy" for="easy"></label>
+                <label id="skull_hard" for="hard"></label>
+                <label id="skull_expert" for="expert"></label>
+            </div>
+
+            <div class="radio-buttons">
+                <div>
+                    <input id="easy" type="radio" name="difficulty" value="easy" >
+                    <span class="checkmark">Easy</span>
+                </div>
+                <div>
+                    <input id="hard" type="radio" name="difficulty" value="hard">
+                    <span class="checkmark">Hard</span>
+                </div>
+                <div>
+                    <input id="expert" type="radio" name="difficulty" value="expert">
+                    <span class="checkmark">Expert</span>
+                </div>
+            </div>
+    </section>
+
+    <footer>
+        <a id="play" href="#" class="button">New Game</a>
+    </footer>
+
+
+
+</div>
+
+</body>
+<script src="index.js"></script>
+<script src="sidebar.js"></script>
+</html>

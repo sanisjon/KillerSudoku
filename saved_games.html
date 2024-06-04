@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SavedGames</title>
+    <link rel="stylesheet" href="basic.css">
+    <link rel="stylesheet" href="saved_games.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="play_card.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+</head>
+<body>
+<div id = "page">
+    <button class="openbtn" onclick="openNav()">☰</button>
+
+    <div id="Sidebar" class="sidebar">
+        <p class="closebtn" onclick="closeNav()">×</p>
+        <a href="index.html" onmouseover="changeImage(this, 'svg/home_white.svg')" onmouseout="restoreImage(this, 'svg/home.svg')">
+            <img src="svg/saved.svg" alt=" ">
+            Home
+        </a>
+        <a href="statistic.html" onmouseover="changeImage(this, 'svg/statistic_white.svg')" onmouseout="restoreImage(this, 'svg/statistic.svg')">
+            <img src="svg/statistic.svg" alt=" ">
+            Statistic
+        </a>
+        <a href="#" onmouseover="changeImage(this, 'svg/info_white.svg')" onmouseout="restoreImage(this, 'svg/info.svg')">
+            <img src="svg/info.svg" alt=" ">
+            How to?
+        </a>
+    </div>
+
+    <header>
+        <div id="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Killer Sudoku">
+            </a>
+        </div>
+    </header>
+    <section id="show">
+        <div class="play_card">
+            <div class="preview">
+
+            </div>
+            <section>
+                <div>
+                    <p>Time</p>
+                    <p>00:01</p>
+                </div>
+                <div>
+                    <p>Mistakes</p>
+                    <p>0/3</p>
+                </div>
+                <div>
+                    <p>Score</p>
+                    <p>0</p>
+                </div>
+            </section>
+        </div>
+
+
+    </section>
+
+    <footer id="page_footer">
+        <a id="play" href="#" class="play_button">Continue</a>
+    </footer>
+
+
+
+</div>
+
+</body>
+<script src="sidebar.js"></script>
+<script src="saved_games.js"></script>
+</html>
