@@ -469,6 +469,9 @@ body {
     #page section aside div{
         height: 75%;
     }
+    #page footer{
+        margin-bottom: 10vh;
+    }
     #page footer .num_block{
         font-size: 2.7em
     ;
@@ -476,13 +479,12 @@ body {
     #interrupted > div{
         width: 70vw;
     }
-    @media only screen and (max-width: 410px){
-        #interrupted section{
-            font-size: 1.3em;
-        }
-        #interrupted button{
-            font-size: 1.5em;
-        }
+}
+@media only screen and (max-width: 410px){
+    #interrupted section{
+        font-size: 1.3em;
     }
-
+    #interrupted button{
+        font-size: 1.5em;
+    }
 }

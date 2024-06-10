@@ -226,7 +226,10 @@
         font-size: 0.9em;
     }
 }
-@media only screen and (max-width: 340px){
+@media only screen and (max-width: 430px){
+    .openbtn{
+        font-size: 2.8em;
+    }
     #instruction{
         height: 9em;
         width: 9em;
@@ -235,12 +238,12 @@
         height: 0.9em;
         width: 0.9em;
     }
-
     .button{
         height: 2.2em;
         width: 121px;
         font-size: 1.5em;
         padding: 1px 57px;
+        margin-bottom: 10vh;
     }
     .button p:nth-child(1){
         font-size: 1em;

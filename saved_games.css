@@ -71,3 +71,24 @@
     }
 
 
+@media only screen and (max-width: 430px){
+    .openbtn{
+        top: 1%;
+        left: 1%;
+    }
+    #page header{
+        height: 15%;
+    }
+
+    #page_footer {
+        min-height: 0;
+        max-height: unset;
+        overflow: unset;
+    }
+    .play_button{
+        padding: 5px 20px;
+        font-size: 2em;
+        margin-bottom: 10vh;
+    }
+
+}

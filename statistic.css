@@ -181,13 +181,32 @@ h1{
     .column{
         max-width: 98%;
         min-width: 382px;
-
+        margin-bottom: 10vh;
+        padding: 5px;
     }
     .column .container{
         font-size: 0.95em;
     }
     h1{
         font-size: 1.2em;
+    }
+
+}
+@media only screen and (max-width: 400px) {
+    .openbtn{
+        font-size: 2.3em;
+    }
+    #page header{
+        height: 15%;
+    }
+    .radio-buttons{
+        width: 90%;
+        min-width: 300px;
+    }
+
+    .column{
+        font-size: 0.86em;
+        min-width: 300px;
     }
 
 }
